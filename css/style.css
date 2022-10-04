@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Source Serif Pro', serif; }
+  font-family: 'Roboto', sans-serif; }
 
 /* variables de colores */
 :root {
@@ -18,6 +18,12 @@
   width: 80%;
   border-radius: 10px;
   margin-bottom: 5rem; }
+  .secciones-nos .imagen-nos {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    object-fit: cover;
+    border-radius: 10px; }
   .secciones-nos h3 {
     height: 2rem;
     text-align: center;
@@ -31,15 +37,8 @@
     color: white;
     text-shadow: 0 0 4px rgba(0, 0, 0, 0.8); }
 
-.imagen-nos {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  object-fit: cover;
-  border-radius: 10px; }
-
 /* prop de las tarjetas de PRODUCTOS */
-.cont-pro {
+.cont .cont-pro {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -48,122 +47,116 @@
   justify-items: stretch;
   gap: 0.3rem;
   padding-bottom: 2rem;
-  background: linear-gradient(to bottom, rgba(34, 34, 34, 0.7), rgba(27, 27, 27, 0.7)), url(../img/fondo-dos.jpg);
+  background: linear-gradient(to bottom, rgba(34, 34, 34, 0.1), rgba(3, 3, 3, 0.1)), url(../img/fondo-dos.jpg);
   background-position: center;
-  background-size: cover;
-  box-shadow: 0 0 5px #000; }
-
-.secciones-pro {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  width: 98%;
-  height: 30rem;
-  background-color: #c7c7c7;
-  transition: 1s ease all;
-  border-radius: 10px;
-  box-shadow: 0 0 2px black; }
-
-.imagen-pro {
-  width: 99.5%;
-  height: 50%;
-  position: absolute;
-  object-fit: cover;
-  border: 1px solid #dddddd;
-  border-radius: 10px 10px 0 0;
-  transition: 3s; }
-
-.secciones-pro h2 {
-  text-align: start;
-  position: absolute;
-  top: 16rem;
-  left: 1.5rem;
-  font-size: 1rem;
-  width: 90%;
-  height: 2rem;
-  line-height: 2rem;
-  color: #000000;
-  overflow: hidden; }
-
-.secciones-pro h3 {
-  text-align: start;
-  position: absolute;
-  top: 18rem;
-  left: 1.5rem;
-  font-size: 0.9rem;
-  line-height: 1rem;
-  height: 3rem;
-  width: 90%;
-  color: #000000;
-  overflow: hidden; }
-
-.secciones-pro h4 {
-  text-align: start;
-  align-content: flex-end;
-  position: absolute;
-  bottom: 3.5rem;
-  left: 1.5rem;
-  font-size: 0.8rem;
-  line-height: 1rem;
-  width: 90%;
-  height: 1rem;
-  margin-top: 0.5rem;
-  color: #000000;
-  overflow: hidden; }
-
-.secciones-pro .desc {
-  font-weight: bold;
-  position: absolute;
-  bottom: 0.8rem;
-  left: 1rem;
-  text-align: center;
-  font-size: 0.7rem;
-  width: 4rem;
-  padding: 4px;
-  border-radius: 5px;
-  color: #faf9f9;
-  text-shadow: 0 0 2px #000;
-  background-color: #02b10a;
-  box-shadow: -1px 1px 4px #3a3a3a; }
-
-.secciones-pro .prec {
-  font-weight: bold;
-  text-align: right;
-  position: absolute;
-  bottom: 4px;
-  padding-right: 1rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  font-size: 1.2rem;
-  width: 90%;
-  color: #000000;
-  border-top: 1px solid #797979; }
+  background-size: auto;
+  box-shadow: 0 0 25px #000;
+  border-radius: 10px; }
+  .cont .cont-pro .secciones-pro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 90%;
+    height: 30rem;
+    background-color: #c7c7c7;
+    transition: 1s ease all;
+    border-radius: 10px;
+    box-shadow: 0 0 2px black; }
+    .cont .cont-pro .secciones-pro .imagen-pro {
+      width: 99.5%;
+      height: 50%;
+      position: absolute;
+      object-fit: cover;
+      border: 1px solid #dddddd;
+      border-radius: 10px 10px 0 0;
+      transition: 3s; }
+    .cont .cont-pro .secciones-pro h2 {
+      text-align: start;
+      position: absolute;
+      top: 16rem;
+      left: 1.5rem;
+      font-size: 1rem;
+      width: 90%;
+      height: 2rem;
+      line-height: 2rem;
+      color: #000000;
+      overflow: hidden; }
+    .cont .cont-pro .secciones-pro h3 {
+      text-align: start;
+      position: absolute;
+      top: 18rem;
+      left: 1.5rem;
+      font-size: 0.9rem;
+      line-height: 1rem;
+      height: 3rem;
+      width: 80%;
+      color: #000000;
+      overflow: hidden; }
+    .cont .cont-pro .secciones-pro .secciones-pro h4 {
+      text-align: start;
+      align-content: flex-end;
+      position: absolute;
+      bottom: 3.5rem;
+      left: 1.5rem;
+      font-size: 0.8rem;
+      line-height: 1rem;
+      width: 75%;
+      height: 1rem;
+      margin-top: 0.5rem;
+      color: #000000;
+      overflow: hidden; }
+    .cont .cont-pro .secciones-pro .desc {
+      font-weight: bold;
+      position: absolute;
+      bottom: 0.8rem;
+      left: 1rem;
+      text-align: center;
+      font-size: 0.7rem;
+      width: 4rem;
+      padding: 4px;
+      border-radius: 5px;
+      color: #faf9f9;
+      text-shadow: 0 0 2px #000;
+      background-color: #02b10a;
+      box-shadow: -1px 1px 4px #3a3a3a; }
+    .cont .cont-pro .secciones-pro .prec {
+      font-weight: bold;
+      text-align: right;
+      position: absolute;
+      bottom: 4px;
+      padding-right: 1rem;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      font-size: 1.2rem;
+      width: 90%;
+      color: #000000;
+      border-top: 1px solid #797979; }
 
 @media screen and (min-width: 600px) {
   .cont-pro {
     gap: 0.6rem; }
-  .secciones-pro {
-    height: 25rem;
-    min-width: 240px;
-    max-width: 280px;
-    box-shadow: 0 0 10px black; }
-  .secciones-pro:hover {
-    scale: 1.1;
-    z-index: 1;
-    background-color: #e6ebd6;
-    box-shadow: 0 1px 22px black; }
-  .secciones-pro h2 {
-    top: 13rem; }
-  .secciones-pro h3 {
-    top: 15rem;
-    left: 1.5rem;
-    font-size: 0.9rem;
-    line-height: 1rem;
-    height: 3rem;
-    width: 75%;
-    color: #000000;
-    overflow: hidden; } }
+    .cont-pro .secciones-pro {
+      height: 25rem;
+      min-width: 240px;
+      max-width: 280px;
+      box-shadow: 0 0 10px black; }
+      .cont-pro .secciones-pro:hover {
+        scale: 1.1;
+        z-index: 1;
+        background-color: #e6ebd6;
+        box-shadow: 0 1px 22px black; }
+      .cont-pro .secciones-pro h2 {
+        top: 13rem; }
+      .cont-pro .secciones-pro h3 {
+        top: 15rem;
+        left: 1.5rem;
+        font-size: 0.9rem;
+        line-height: 1rem;
+        height: 3rem;
+        width: 75%;
+        color: #000000;
+        overflow: hidden; } }
 
 @media screen and (min-width: 900px) {
   .cont-pro {
@@ -176,31 +169,23 @@
   align-items: center;
   gap: 2px;
   padding-bottom: 2rem;
-  background: linear-gradient(to bottom, rgba(34, 34, 34, 0.7), rgba(27, 27, 27, 0.7)), url(../img/fondo-dos.jpg);
+  background: linear-gradient(to bottom, rgba(34, 34, 34, 0.1), rgba(3, 3, 3, 0.1)), url(../img/fondo-dos.jpg);
   background-position: center;
-  background-size: cover;
-  box-shadow: 0 0 5px #000; }
-
-.cont-tra-dos {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2px;
-  padding-top: 2rem;
-  background: linear-gradient(to bottom, rgba(58, 58, 58, 0.98), rgba(51, 51, 51, 0.98));
-  box-shadow: 0 0 5px #000; }
+  background-size: auto;
+  box-shadow: 0 0 25px #000;
+  border-radius: 10px; }
 
 .secciones-tra {
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
-  width: 100%;
+  width: 90%;
   background: linear-gradient(to bottom, rgba(68, 68, 68, 0.98), rgba(43, 43, 43, 0.98));
-  margin-top: 0.2rem;
-  padding-top: 3rem;
-  padding-bottom: 3rem; }
+  margin-bottom: 1rem;
+  padding-bottom: 6rem;
+  box-shadow: 0 0 10px #000;
+  border-radius: 10px; }
   .secciones-tra h3 {
     height: 4rem;
     text-align: justify;
@@ -209,6 +194,8 @@
     text-shadow: 0 0 5px black; }
   .secciones-tra p {
     width: 100%;
+    position: absolute;
+    top: 70%;
     text-align: center;
     font-weight: bold;
     color: white;
@@ -228,7 +215,7 @@
     border-radius: 10px;
     transition: all 0.5s ease; }
     .secciones-tra:hover {
-      height: 210px;
+      height: 280px;
       background: linear-gradient(to bottom, rgba(29, 29, 29, 0.98), rgba(12, 12, 12, 0.98)); }
     .secciones-tra h3 {
       position: absolute;
@@ -243,6 +230,7 @@
     .secciones-tra p {
       width: 40%;
       position: absolute;
+      top: 5rem;
       bottom: 1rem;
       left: 45%;
       text-align: start;
@@ -320,6 +308,9 @@ textarea {
   margin-top: 5rem;
   margin-bottom: 1rem; }
 
+.parrafo-secc-der {
+  padding: 3rem 2rem; }
+
 /* ocultamos la barra de navegacion lateral y el aside para celular */
 .navegacion {
   display: none; }
@@ -338,7 +329,8 @@ textarea {
       justify-content: center;
       position: relative;
       width: 75%;
-      height: 10rem;
+      height: 12rem;
+      margin-bottom: 10rem;
       transition: 1s ease all;
       border-radius: 10px;
       box-shadow: 0 5px 10px #000; }
@@ -351,7 +343,7 @@ textarea {
     object-fit: cover;
     border: 1px solid #3f3f3f;
     border-radius: 10px;
-    /*filter: blur(2px);*/
+    filter: grayscale(1);
     transition: 3s; }
   .img-nav:hover {
     filter: none; }
@@ -387,7 +379,7 @@ textarea {
     width: 75%;
     height: 16rem;
     gap: 0.5rem;
-    margin-bottom: 5rem; }
+    margin-bottom: 15rem; }
   .card:hover .front {
     transform: perspective(600px) rotateY(180deg); }
   .card:hover .back {
@@ -416,7 +408,8 @@ textarea {
     position: relative;
     width: 100%;
     height: 100%;
-    object-fit: cover; }
+    object-fit: cover;
+    filter: grayscale(1); }
   .card .front h4 {
     position: absolute;
     bottom: 5%;
@@ -443,7 +436,7 @@ textarea {
     height: 100%;
     object-fit: cover;
     border-radius: 5px;
-    filter: brightness(0.3); }
+    filter: brightness(0.6); }
   .card .back h4 {
     position: absolute;
     top: 1rem;
@@ -596,9 +589,6 @@ body {
   width: 100%;
   height: 90vh;
   padding: 1rem;
-  background-image: url(../img/fondo-index.jpg);
-  background-position: center;
-  background-size: cover;
   /* propiedad para dejar fija esta imagen */
   background-attachment: fixed;
   transition: 1s;
@@ -613,7 +603,7 @@ body {
     width: 50%;
     text-align: center;
     justify-items: center;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-weight: bold;
     color: #ffffff;
     text-shadow: 0 1px 3px black; }
@@ -643,19 +633,21 @@ main {
   align-items: center;
   justify-content: center; }
   main .tituloh1 {
-    height: 14rem;
-    width: 70%;
-    align-self: center;
-    justify-self: center;
-    text-align: center;
-    line-height: 14rem;
-    font-size: 2rem;
-    font-weight: bold;
-    color: #ffffff;
-    text-shadow: 0 1px 3px black; }
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%; }
+    main .tituloh1 h1 {
+      line-height: 3rem;
+      font-size: 2rem;
+      font-weight: bold;
+      max-width: 90%;
+      margin: 5rem auto;
+      text-align: center;
+      color: #ffffff;
+      text-shadow: 0 1px 3px black; }
 
 #comienzo-main {
-  padding-top: 6rem; }
+  padding-top: 4rem; }
 
 .cont {
   width: 100%;
@@ -672,10 +664,11 @@ main {
     align-items: center;
     gap: 1rem;
     padding-top: 1rem;
-    background: linear-gradient(to bottom, rgba(34, 34, 34, 0.7), rgba(27, 27, 27, 0.7)), url(../img/fondo-dos.jpg);
+    background: linear-gradient(to bottom, rgba(34, 34, 34, 0.1), rgba(3, 3, 3, 0.1)), url(../img/fondo-dos.jpg);
     background-position: center;
-    background-size: cover;
-    box-shadow: 0 0 5px #000; }
+    background-size: auto;
+    box-shadow: 0 0 25px #000;
+    border-radius: 10px; }
   .cont .cont-dos {
     width: 100%;
     display: flex;
@@ -683,20 +676,21 @@ main {
     align-items: center;
     gap: 1rem;
     padding-top: 1rem;
-    background: linear-gradient(to bottom, rgba(34, 34, 34, 0.7), rgba(27, 27, 27, 0.7)), url(../img/fondo-dos.jpg);
+    background: linear-gradient(to bottom, rgba(34, 34, 34, 0.1), rgba(3, 3, 3, 0.1)), url(../img/fondo-dos.jpg);
     background-position: center;
-    background-size: cover;
-    box-shadow: 0 0 5px #000; }
+    background-size: auto;
+    box-shadow: 0 0 25px #000;
+    border-radius: 10px; }
 
 /* estilos del titulo h2 valido para los dos grupos de contenido */
 .tituloh2 {
   width: 90%;
-  height: 5rem;
   text-align: center;
   justify-items: center;
-  line-height: 5rem;
+  line-height: 3rem;
   font-size: 1.5rem;
   font-weight: bold;
+  padding: 3rem;
   color: #ffffff;
   text-shadow: 0 1px 6px black; }
 
@@ -778,8 +772,8 @@ main {
   /* prop. del MAIN */
   main {
     display: grid;
-    grid-template-columns: 0.8fr 4fr 1.5fr;
-    grid-template-rows: 12rem auto;
+    grid-template-columns: 1fr 4fr 1.2fr;
+    grid-template-rows: 14rem auto;
     grid-template-areas: "tit tit tit" "naveg cont aside";
     align-items: flex-start;
     margin-top: 1rem;
