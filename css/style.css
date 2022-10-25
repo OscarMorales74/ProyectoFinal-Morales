@@ -642,7 +642,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 20%;
-    box-shadow: 5px 8px 7px black; }
+    filter: drop-shadow 5px 8px 7px 20px black; }
   .portada .texto {
     width: 50%;
     text-align: center;
