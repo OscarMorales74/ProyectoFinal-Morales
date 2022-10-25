@@ -7,11 +7,11 @@
         flex-direction: column;
         align-items: center;
         position: relative;
-        width: 80%;
+        width: 100%;
         border-radius: 10px;
         margin-bottom: 5rem;
         .imagen-nos{
-            width: 100%;
+            width: 95%;
             height: 100%;
             position: relative;
             object-fit: cover;
@@ -19,15 +19,16 @@
         }
         h3{
             height: 2rem;
+            font-size: 1.6rem;
             text-align: center;
-            margin: 1rem;
+            margin: 2rem;
             color: rgb(255, 255, 255);
             text-shadow: 0 0 5px rgba(0, 0, 0, 1);
         }
         p{
-            width: 100%;
+            width: 80%;
             text-align: justify;
-            font-weight: bold;
+            font-size: 1.2rem;
             color: rgb(255, 255, 255);
             text-shadow: 0 0 4px rgba(0, 0, 0, 0.8);
         }

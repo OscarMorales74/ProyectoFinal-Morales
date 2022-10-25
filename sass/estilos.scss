@@ -123,6 +123,7 @@ body{
         display: flex;
         flex-direction: column;
         height: 20%;
+        box-shadow: 5px 8px 7px rgba(0, 0, 0, 1);
     }
     /* porp del texto debajo del logo */
     .texto{
@@ -132,7 +133,7 @@ body{
         font-size: 2.5rem;
         font-weight: bold;
         color: #ffffff;    
-        text-shadow: 0 1px 3px rgba(0, 0, 0, 1);
+        text-shadow: 5px 8px 7px rgba(0, 0, 0, 1);
     }
     /*prop del boton vamos */
     .vamos{
@@ -161,13 +162,6 @@ body{
 
 
 
-
-
-
-
-
-
-
 /* prop. del MAIN */
 main{
     display: flex;
@@ -180,13 +174,13 @@ main{
         width: 100%;
         h1{
             line-height: 3rem;
-            font-size: 2rem;
+            font-size: 2.5rem;
             font-weight: bold;
             max-width: 90%;
             margin: 5rem auto;
             text-align: center;
             color: #ffffff;
-            text-shadow: 0 1px 3px rgba(0, 0, 0, 1);
+            text-shadow: 5px 8px 7px rgba(0, 0, 0, 1);
         }
     }
 }
@@ -200,34 +194,20 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5rem;
-    /* estilos del primer grupo de contenido principal */
-    .cont-uno{
+    gap: 10rem;
+    /* estilos del primer y segundo grupo de contenido principal */
+    .cont-uno, .cont-dos{
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 1rem;
+        gap: 10px;
         padding-top: 1rem;
+        padding-bottom: 2rem;
         background: $fondo-secciones;
         background-position: center;
         background-size: auto;
         box-shadow: 0 0 25px #000;
-        border-radius: 10px;
-    }
-    /* estilos del segundo grupo de contenido principal */
-    .cont-dos{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-        padding-top: 1rem;
-        background: $fondo-secciones;
-        background-position: center;
-        background-size: auto;
-        box-shadow: 0 0 25px #000;
-        border-radius: 10px;
     }
 }
 /* estilos del titulo h2 valido para los dos grupos de contenido */
@@ -236,11 +216,11 @@ main{
     text-align: center;
     justify-items: center;
     line-height: 3rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
-    padding: 3rem;
+    padding: 7rem;
     color: #ffffff;
-    text-shadow: 0 1px 6px rgba(0, 0, 0, 1);
+    text-shadow: 5px 8px 8px rgba(0, 0, 0, 1);
 }
 /* estilos del cada seccion valido para los dos grupos de contenido */
 .secciones{
@@ -248,37 +228,43 @@ main{
     flex-direction: column;
     align-items: center;
     position: relative;
-    width: cover;
+    width: 90%;
     height: 30rem;
-    margin-bottom: 2rem;
+    border-radius: 10px;
     .imagen-secc{
         width: 100%;
         height: 100%;
         position: relative;
         object-fit: cover;
+        border-radius: 10px;
     }
-    h2{
+    h3{
         height: 2rem;
         position: absolute;
         top: 3%;
         left: 4%;
-        font-size: 1.2rem;
+        font-size: 1.6rem;
         color: rgb(255, 255, 255);
         text-shadow: 0 0 5px rgba(0, 0, 0, 1);
     }
     p{
         width: 100%;
         position: absolute;
-        bottom: 4%;
-        padding: 1rem 1rem 1rem 20vh;
+        bottom: 0;
+        font-size: 1.2rem;
+        padding: 1rem 1rem 2rem 20vh;
         text-align: end;
-        font-weight: bold;
         color: rgb(255, 255, 255);
         background-color: rgba(0, 0, 0, 0.39);
         text-shadow: 0 0 8px rgb(0, 0, 0);
+        box-shadow: 0 3px 7px rgb(0, 0, 0);
     }
 }
  
+
+
+
+
 
 
 
@@ -317,15 +303,15 @@ main{
             border: solid 1px rgb(29, 29, 29);
             border-radius: 6px;
             transition: .5s ease all;
-            width: 12%;
+            width: 15%;
             height: 2.5rem;
             line-height: 1.8rem;
             overflow: hidden;
-            transition: 1.5s;
+            transition: 0.3s;
             &:hover{
-                color: rgb(225, 241, 41);
-                background: radial-gradient(ellipse at top, rgb(68, 68, 40), rgb(34, 34, 34));
-                box-shadow: 0px 0px 2px rgb(255, 255, 255);
+                color: #f0d854;
+                background: radial-gradient(ellipse at top, rgb(51, 51, 51), rgb(0, 0, 0));
+                box-shadow: 0px 0px 1px #f0d854;
                 scale: 1.05;
             }
         }
@@ -339,14 +325,14 @@ main{
     
     
 
-     /* prop. del MAIN */
-     main{
+    /* prop. del MAIN */
+    main{
         display: grid;
-        grid-template-columns: 1fr 4fr 1.2fr;
+        grid-template-columns: 5.2fr 1.2fr;
         grid-template-rows: 14rem auto;
         grid-template-areas: 
-        "tit tit tit"
-        "naveg cont aside";
+        "tit tit"
+        "cont aside";
         align-items: flex-start;
         margin-top: 1rem;
         .tituloh1{
@@ -358,10 +344,14 @@ main{
             grid-area: cont;
             display: flex;
             .cont-uno{
-                padding: 0 5px 5px 5px;
+                padding: 0 5px 2rem 5px;
+                border-radius: 10px;
+                width: 90%;
             }
             .cont-dos{
-                padding: 0 5px 5px 5px;
+                padding: 0 5px 2rem 5px;
+                border-radius: 10px;
+                width: 90%;
             }
             
         }
@@ -371,14 +361,11 @@ main{
     /* prop de SECCIONES */
     .secciones{
         height: 30rem;
-        width: 100%;
+        width: 95%;
         border-radius: 10px;
-        transition: 1s ease all;
-        box-shadow: 0 5px 10px #000;
+        transition: 0.3s ease all;
         &:hover{
-            height: 31rem;
-            border: solid 2px #262740;
-            box-shadow: 0 0 3px rgb(255, 255, 255);
+            box-shadow: 0 5px 10px #000;
         }
         .imagen-secc{
             border-radius: 10px;
@@ -394,7 +381,7 @@ main{
 
 
 /* media queries para pantalla grande */
-@media screen and (min-width:900px){
+@media screen and (min-width:1058px){
     
     /* prop. del HEADER, que incluyen su imagen y el menu */
     .encab{
@@ -405,7 +392,16 @@ main{
     }
     .encab nav a{
         font-size: 1rem;
-        width: 13%;
+    }
+    main{
+        display: grid;
+        grid-template-columns: 1.2fr 4fr 1.2fr;
+        grid-template-rows: 14rem auto;
+        grid-template-areas: 
+        "tit tit tit"
+        "naveg cont aside";
+        align-items: flex-start;
+        margin-top: 1rem;
     }
 }
 
