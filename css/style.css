@@ -75,7 +75,7 @@
     .cont .cont-pro .secciones-pro h3 {
       text-align: start;
       position: absolute;
-      top: 16rem;
+      top: 6rem;
       left: 1.4rem;
       font-size: 1.2rem;
       line-height: 1.2rem;
@@ -100,7 +100,7 @@
       text-align: start;
       align-content: flex-end;
       position: absolute;
-      bottom: 2.5rem;
+      bottom: 3rem;
       left: 1.5rem;
       font-size: 0.9rem;
       line-height: 0.9rem;
@@ -110,32 +110,125 @@
       margin-top: 0.5rem;
       color: #000000;
       overflow: hidden; }
+    .cont .cont-pro .secciones-pro .boton-agregar {
+      position: absolute;
+      justify-content: center;
+      bottom: 0.4rem;
+      left: 2rem;
+      height: 60px;
+      width: 60px;
+      border: none;
+      border-radius: 50%; }
+      .cont .cont-pro .secciones-pro .boton-agregar img {
+        width: 100%;
+        justify-items: center; }
+      .cont .cont-pro .secciones-pro .boton-agregar:hover {
+        cursor: pointer;
+        color: white;
+        background-color: #7ab341; }
     .cont .cont-pro .secciones-pro .desc {
       font-weight: bold;
       position: absolute;
       bottom: 0.8rem;
-      left: 1rem;
+      right: 10rem;
       text-align: center;
       font-size: 1rem;
       width: 6rem;
       padding: 4px;
       border-radius: 5px;
-      color: #faf9f9;
-      text-shadow: 0 0 2px #000;
-      background-color: #02b10a;
-      box-shadow: -1px 1px 4px #3a3a3a; }
+      color: #fd0404; }
     .cont .cont-pro .secciones-pro .prec {
       font-weight: bold;
       text-align: right;
       position: absolute;
       bottom: 4px;
-      padding-right: 1rem;
-      padding-top: 0.5rem;
+      right: 1rem;
+      padding-right: 0.4rem;
+      padding-top: 1.5rem;
       padding-bottom: 0.5rem;
-      font-size: 1.4rem;
-      width: 90%;
+      font-size: 1.8rem;
+      width: 40%;
       color: #000000;
       border-top: 1px solid #797979; }
+
+.fondo-carrito {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .5s;
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.3); }
+  .fondo-carrito .ventana-carrito {
+    position: relative;
+    background-color: #343030;
+    min-width: 500px;
+    padding: 20px;
+    margin-top: -100%;
+    transition: all .5s;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px; }
+    .fondo-carrito .ventana-carrito h3 {
+      font-size: 1.5rem;
+      color: #e14c41;
+      padding-bottom: 5px; }
+    .fondo-carrito .ventana-carrito #btn-cerrar-carrito {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      font-size: 20px;
+      color: #e14c41 !important;
+      border: none;
+      background-color: white; }
+    .fondo-carrito .ventana-carrito #btn-cerrar-carrito:hover {
+      cursor: pointer; }
+    .fondo-carrito .ventana-carrito p {
+      color: white; }
+
+.modal-active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 5; }
+
+.modal-active .ventana-carrito {
+  margin-top: 0; }
+
+.modal-carrito #btn-cerrar-carrito:focus {
+  outline: none; }
+
+.modal-carrito .producto-precio {
+  padding-top: 10px; }
+
+#cesta-carrito {
+  position: absolute;
+  left: 8rem;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  background-color: #524e4e;
+  border-radius: 5%;
+  padding: 5px 20px;
+  justify-items: stretch;
+  transition: all .3s; }
+  #cesta-carrito:hover {
+    cursor: pointer;
+    color: white;
+    background-color: #7ab341; }
+  #cesta-carrito:focus {
+    outline: none; }
+
+.prodEnCarrito {
+  border-left: 5px solid lightblue;
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+  margin: 5px 0;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between; }
 
 @media screen and (min-width: 600px) {
   .cont .cont-pro {
@@ -163,7 +256,11 @@
         color: #000000;
         overflow: hidden; }
       .cont .cont-pro .secciones-pro h4 {
-        top: 16rem; } }
+        top: 16rem; }
+      .cont .cont-pro .secciones-pro .boton-agregar {
+        left: 1rem; }
+      .cont .cont-pro .secciones-pro .desc {
+        right: 6rem; } }
 
 @media screen and (min-width: 1058px) {
   .cont-pro {
@@ -771,7 +868,7 @@ main {
       display: flex;
       flex-direction: row;
       position: relative;
-      width: 100%;
+      width: 70%;
       height: 100%;
       right: 2%;
       top: 0;
