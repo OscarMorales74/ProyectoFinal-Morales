@@ -1,9 +1,11 @@
 //PRIMERO CREAR ARRAY CARRITO
-let carrito =[];
+let carrito = [];
+
 
 //CONSTANTE PARA ESCUCHAR AL HACER CLICK EN EL BOTON CARRITO
-//SE VINCULA EL DIV CON ID=cont-producto QUE ES EL CONTENEDOR QUE TIENE LAS CARDS
-const productoContenedor = document.getElementById('cont-producto');
+//SE VINCULA EL DIV CON ID=cont-figuritas QUE ES EL CONTENEDOR QUE TIENE LAS CARDS
+const productoContenedor = document.getElementById('cont-figuritas');
+
 
 //APLICAR METODO (addEventListener) PARA ESCUCHAR EL EVENTO 'CLICK' 
 //PRIMER ARGUM (CLICK) Y SEGUNDO ARG UNA ARROW FUNCTION QUE ACTUA COMO(callback)
@@ -14,6 +16,15 @@ const productoContenedor = document.getElementById('cont-producto');
 productoContenedor.addEventListener('click', (e) => {
     if(e.target.classList.contains('agregar')) {
     validarProdEnCarrito(e.target.id);
+    Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'LISTO!',
+        color: '#fff',
+        text: 'Se agregó el producto a tu carrito',
+        background: '#333',
+        timer: 1500
+    })
     }
 });
 
@@ -25,11 +36,12 @@ productoContenedor.addEventListener('click', (e) => {
 //SI NO ES REPETIDO DEBE AGREGARLO AL CARRITO
 //ANTES, CON FIND HAY QUE BUSCAR EL PRODUCTO EN EL ARRAY STOCKPROD
 //CUANDO LO ENCUENTRE CON EL METODO PUSH SE AGREGA AL CARRITO
-const validarProdEnCarrito = (productoId) => {
+const validarProdEnCarrito = async (productoId) => {
     const prodRepetido = carrito.find(producto => producto.id == productoId);
-
+    
     if (!prodRepetido){
-        const producto = stockProd.find(producto => producto.id == productoId);
+        const stock = await productController();
+        const producto = stock.find(producto => producto.id == productoId);
         carrito.push(producto);
         pintarProdCarrito(producto);
         actualizarTotalesCarrito(carrito);
@@ -72,7 +84,6 @@ const pintarTotalesCarrito = (totalCantidad, totalCompra) => {
 
     contadorCarrito.innerText = totalCantidad;
     precioTotal.innerText = totalCompra;
-    // actualizarTotalesCarrito(carrito);
 };
 
 //ELIMINAR PRODUCTOS EN LA VENTANA CARRITO
@@ -115,3 +126,11 @@ const obtenerCarritoStorage = () => {
     const carritoStorage = JSON.parse(localStorage.getItem('carrito'));
     return carritoStorage
 };
+
+function vaciarCarrito() {
+    contenedor.innerHTML= "";
+    // carrito.length = 0;
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+    actualizarCarrito(carrito);
+    actualizarTotalesCarrito(carrito);
+}
