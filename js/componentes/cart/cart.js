@@ -127,10 +127,3 @@ const obtenerCarritoStorage = () => {
     return carritoStorage
 };
 
-function vaciarCarrito() {
-    contenedor.innerHTML= "";
-    // carrito.length = 0;
-    localStorage.setItem('carrito', JSON.stringify(carrito));
-    actualizarCarrito(carrito);
-    actualizarTotalesCarrito(carrito);
-}

@@ -8,7 +8,7 @@ const vaciarCarritoBtn = document.getElementById('btn-vaciar-carrito')
 
 //AGREGO EVENTO PARA MOSTRAR CARRITO
 abrirCarrito.addEventListener('click', () => {
-    fondoCarrito.classList.toggle('modal-active')
+    fondoCarrito.classList.toggle('modal-active');
 });
 
 cerrarCarrito.addEventListener('click', () => {
@@ -29,6 +29,28 @@ ventanaCarrito.addEventListener('click', (e) => {
 });
 
 vaciarCarritoBtn.addEventListener('click', () => {
-    carrito.innerHTML = '';
+if (carrito.length === 0) {
+    Swal.fire({
+        position: 'center',
+        title: 'CARRITO VACIO',
+        color: '#fff',
+        text: 'Tu carrito ya se encuentra vacio',
+        background: '#333',
+        timer: 1500
+    });
+}
+else {
+    carrito.splice(0, carrito.length);
+    actualizarCarrito(carrito);
+    actualizarTotalesCarrito(carrito);
+    Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'CARRITO VACIO',
+        color: '#fff',
+        text: 'Tu carrito se vacio con exito',
+        background: '#333',
+        timer: 1500
+    });
+}
 });
-

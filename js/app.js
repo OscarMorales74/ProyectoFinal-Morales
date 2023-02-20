@@ -29,7 +29,6 @@ const pintarProd = async () => {
     })
 }
 
-pintarProd();
 
 //CREAMOS FUNCION agregaralcarrito Y LE DAMOS POR PARAMETRO EL ID DE LOS PRODUCTOS
 
