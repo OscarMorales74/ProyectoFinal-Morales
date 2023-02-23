@@ -36,7 +36,7 @@ if (carrito.length === 0) {
         color: '#fff',
         text: 'Tu carrito ya se encuentra vacio',
         background: '#333',
-        timer: 1500
+        timer: 3000
     });
 }
 else {
@@ -50,7 +50,7 @@ else {
         color: '#fff',
         text: 'Tu carrito se vacio con exito',
         background: '#333',
-        timer: 1500
+        timer: 3000
     });
 }
 });

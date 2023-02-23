@@ -23,7 +23,7 @@ productoContenedor.addEventListener('click', (e) => {
         color: '#fff',
         text: 'Se agregó el producto a tu carrito',
         background: '#333',
-        timer: 1500
+        timer: 3000
     })
     }
 });
@@ -52,7 +52,7 @@ const validarProdEnCarrito = async (productoId) => {
         actualizarTotalesCarrito(carrito);
     }
 };
-//FUNCION PARA RENDERIZAR EL CARRITO
+// FUNCION PARA RENDERIZAR EL CARRITO
 const pintarProdCarrito = (producto) => {
     const contenedor = document.getElementById('carrito-contenedor');
     const div = document.createElement('div');
@@ -66,6 +66,28 @@ const pintarProdCarrito = (producto) => {
     //CON APPENDCHILD SE AGREGAN PRODUCTOS AL CARRITO
     contenedor.appendChild(div);
 };
+
+// const pintarProdCarrito = (producto) => {
+//     if(carrito.length = 0) {
+//         div.innerHTML =`
+//            <p>Aun no hay productos en tu carrito</p>
+//         `
+//     }
+//     else {
+//         const contenedor = document.getElementById('carrito-contenedor');
+//     const div = document.createElement('div');
+//     div.classList.add('prodEnCarrito');
+//     div.innerHTML =`
+//         <p>${producto.nombre}</p>
+//         <p>Precio: $${producto.precio}</p>
+//         <p id=cantidad${producto.id}>Cantidad: ${producto.cantidad}</p>
+//         <button class="btn waves-effect waves-ligth boton-eliminar" value="${producto.id}">X</button>
+//     `
+
+//     contenedor.appendChild(div);
+//     }
+// }
+
 
 //FUNCION PARA ACTUALIZAR LA CANTIDAD TOTAL DE CADA PRODUCTO EN LA VENTANA DEL CARRITO
 //DAMOS COMO PARAMATRO 'carrito'
